@@ -1,0 +1,36 @@
+-- Create customer table
+CREATE TABLE customer (
+   customer_id SERIAL PRIMARY KEY,
+   first_name VARCHAR(100) NOT NULL,
+   last_name VARCHAR(100) NOT NULL
+);
+
+-- Create orders table
+CREATE TABLE orders (
+    order_id SERIAL PRIMARY KEY,
+    customer_id INTEGER NOT NULL REFERENCES customer(customer_id),
+    order_date TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+    order_number VARCHAR(50) NOT NULL,
+    order_amount DECIMAL(10,2) NOT NULL
+);
+
+-- Select data from customer
+SELECT * FROM customer;
+
+-- Add a column to customer
+ALTER TABLE customer ADD COLUMN active BOOLEAN;
+
+-- Drop a column from customer
+ALTER TABLE customer DROP COLUMN active;
+
+-- Rename a column in customer
+ALTER TABLE customer RENAME COLUMN first_name TO F_name;
+
+-- Rename the customer table to buyers
+ALTER TABLE customer RENAME TO buyers;
+
+-- Insert data into buyers table
+INSERT INTO buyers (F_name, last_name) VALUES ('Bansi', 'Sachade');
+
+
+

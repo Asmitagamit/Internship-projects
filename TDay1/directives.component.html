@@ -1,0 +1,34 @@
+<p>directives works!</p>
+
+ <div *ngIf="isAdmin">
+    logged in user is admin 
+</div>
+
+<div *ngIf="!isAdmin">
+    logged in user is not  admin 
+</div> 
+
+<!-- 
+@if (isAdmin)
+{
+    logged in user is admin
+}
+
+@else (isAdmin)
+{
+    logged user is not
+}  -->
+
+ <ul>
+    <li *ngFor="let name of names"> 
+        {{name}}
+    </li>
+</ul>
+
+<!-- <ul>
+    @for (name of names; track $index) {}
+    <li>
+        *ngFor="let name of names"> 
+        {{name}}
+    </li>
+</ul> -->

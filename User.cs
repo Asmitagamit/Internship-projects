@@ -15,25 +15,19 @@ namespace Mission.Entities.Entities
         [Column("id")]
         public int Id { get; set; }
         [Column("first_name")]
-        public string First_Name { get; set; }
+        public string FirstName { get; set; }
         [Column("last_name")]
-        public string Last_Name { get; set; }
-        [Column("emailaddress")]
+        public string LastName { get; set; }
+        [Column("email_address")]
         public string EmailAddress { get; set; }
         [Column("password")]
-
         public string Password { get; set; }
-        [Column("phonenumber")]
-
+        [Column("phone_number")]
         public string PhoneNumber { get; set; }
-        [Column("usertype")]
-
+        [Column("user_type")]
         public string UserType { get; set; }
-        [Column("userimage")]
-
+        [Column("user_image")]
         public string UserImage { get; set; } = string.Empty;
-        
-
 
     }
 }
